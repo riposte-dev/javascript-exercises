@@ -7,13 +7,11 @@
 </head>
 <body>
     <script>
-        function capitalize(phrase) {
-            return phrase[0].toUpperCase() + phrase.slice(1).toLowerCase();
+        function lastLetter(phrase) {
+            return phrase.slice(-1);
         }
 
-        console.log(capitalize("abcd"));
-        console.log(capitalize("ABCD"));
-        console.log(capitalize("aBcD"));
+        console.log(lastLetter("abcd"));
     </script>
 </body>
 </html>
