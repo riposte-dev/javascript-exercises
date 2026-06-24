@@ -7,11 +7,13 @@
 </head>
 <body>
     <script>
-        function lastLetter(phrase) {
-            return phrase.slice(-1);
-        }
+        while (true) {
+            let userInput = +prompt("Pick a number greater than 100");
 
-        console.log(lastLetter("abcd"));
+            if (userInput > 100 || !userInput) {
+                break;
+            }
+        }
     </script>
 </body>
 </html>
