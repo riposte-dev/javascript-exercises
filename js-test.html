@@ -24,6 +24,21 @@
         let myArray = [1, 2, 3, 4, 5];
 
         console.log(sumOfTripledEvens(myArray));
+
+        function sumOfTripledEvensVersionTwo(array) {
+            // First, filter out any odd numbers
+            let filteredArray = myArray.filter((number) => number % 2 == 0);
+
+            // Second, triple all numbers (since only even numbers are left)
+            let mappedArray = filteredArray.map((num) => num * 3);
+
+            // Third, multiply all numbers
+            let reducedArray = mappedArray.reduce((product, number) => product * number, 1);
+
+            return reducedArray;
+        }
+
+        console.log(sumOfTripledEvensVersionTwo(myArray));
     </script>    
 </body>
 </html>
