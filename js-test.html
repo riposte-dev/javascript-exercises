@@ -7,38 +7,16 @@
 </head>
 <body>
     <script>
-        function sumOfTripledEvens(array) {
-            let sum = 0;
-
-            for (let i = 0; i < array.length; i++) {
-                if (array[i] % 2 == 0) {
-                    const tripledEvenNumber = array[i] * 3;
-
-                    sum += tripledEvenNumber;
-                }
-            }
-
-            return sum;
-        }
-
         let myArray = [1, 2, 3, 4, 5];
 
-        console.log(sumOfTripledEvens(myArray));
-
-        function sumOfTripledEvensVersionTwo(array) {
-            // First, filter out any odd numbers
-            let filteredArray = myArray.filter((number) => number % 2 == 0);
-
-            // Second, triple all numbers (since only even numbers are left)
-            let mappedArray = filteredArray.map((num) => num * 3);
-
-            // Third, multiply all numbers
-            let reducedArray = mappedArray.reduce((product, number) => product * number, 1);
-
-            return reducedArray;
+        function sumOfTripledEvens(array) {
+            return array
+                .filter((num) => num % 2 == 0)
+                .map((num) => num * 3)
+                .reduce((accumulated, current) => accumulated * current);
         }
 
-        console.log(sumOfTripledEvensVersionTwo(myArray));
+        console.log(sumOfTripledEvens(myArray));
     </script>    
 </body>
 </html>
