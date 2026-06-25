@@ -7,22 +7,23 @@
 </head>
 <body>
     <script>
-        let primeNumbers = [2];
-        let n = +prompt("Enter an integer greater than 1", "2");
+        function sumOfTripledEvens(array) {
+            let sum = 0;
 
-        /* We check for primes by checking whether it is divisible by any of the previous primes */
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    const tripledEvenNumber = array[i] * 3;
 
-        outer: for (let i = 2; i <= n; i++) {
-            for (primeNumber of primeNumbers) {
-                if (i % primeNumber == 0) {
-                    continue outer;
+                    sum += tripledEvenNumber;
                 }
             }
-            
-            primeNumbers.push(i);
+
+            return sum;
         }
-        
-        console.log(primeNumbers);
+
+        let myArray = [1, 2, 3, 4, 5];
+
+        console.log(sumOfTripledEvens(myArray));
     </script>    
 </body>
 </html>
