@@ -7,18 +7,16 @@
 </head>
 <body>
     <script>
-        function camelize(str) {
-            let array = str.split("-");
-
-            for (let i = 1; i < array.length; i++) {
-                array[i] = array[i][0].toUpperCase() + array[i].slice(1);
-            }
-
-            return array.join("");
+        let arr = [5, 3, 8, 1];
+        
+        function filterRange(array, a, b) {
+            return array
+                .filter((num) => (a <= num && num <= b) ? true : false)
         }
 
-        console.log(camelize("background-color"));
-        console.log(camelize("-webkit-transition"));
+        let filtered = filterRange(arr, 1, 4);
+        alert(filtered);
+        alert(arr);
     </script>    
 </body>
 </html>
