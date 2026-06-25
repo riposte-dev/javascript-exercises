@@ -7,13 +7,22 @@
 </head>
 <body>
     <script>
-        while (true) {
-            let userInput = +prompt("Pick a number greater than 100");
+        let primeNumbers = [2];
+        let n = +prompt("Enter an integer greater than 1", "2");
 
-            if (userInput > 100 || !userInput) {
-                break;
+        /* We check for primes by checking whether it is divisible by any of the previous primes */
+
+        outer: for (let i = 2; i <= n; i++) {
+            for (primeNumber of primeNumbers) {
+                if (i % primeNumber == 0) {
+                    continue outer;
+                }
             }
+            
+            primeNumbers.push(i);
         }
-    </script>
+        
+        console.log(primeNumbers);
+    </script>    
 </body>
 </html>
