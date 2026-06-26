@@ -7,28 +7,12 @@
 </head>
 <body>
     <script>
-        function filterRangeInPlace(arr, a, b) {
-            /*
-            When arr is spliced, the array is shortened but the index
-            is not modified, causing some elements to be skipped.
-            So we increment the for loop with an explicit index i
-            and set it back by 1 whenever arr is spliced
-            */
-            for (let i = 0; i < arr.length; i++) {
-                let val = arr[i];
+        let arr = [5, 2, 1, -10, 8];
 
-                if (val < a || val > b) {
-                    arr.splice(i, 1);
-                    i--;
-                }
-            }
-        }
+        // ... your code to sort it in decreasing order
+        arr.sort((a, b) => b - a);
 
-        let arr = [5, 3, 8, 1];
-
-        filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
-
-        alert( arr ); // [3, 1]
+        alert( arr ); // 8, 5, 2, 1, -10
     </script>    
 </body>
 </html>
