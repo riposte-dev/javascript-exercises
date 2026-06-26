@@ -7,16 +7,31 @@
 </head>
 <body>
     <script>
-        let arr = [5, 3, 8, 1];
-        
-        function filterRange(array, a, b) {
-            return array
-                .filter((num) => (a <= num && num <= b) ? true : false)
+        function filterRangeInPlace(arr, a, b) {
+            /*
+            When arr is spliced, the array is shortened but the index
+            is not modified, causing some elements to be skipped.
+            So we increment the for loop with an explicit index i
+            and set it back by 1 whenever arr is spliced
+            */
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+
+                if (a <= item && item <= b) {
+                    console.log(`${item} passes`);
+                } else {
+                    console.log(`${item} does not pass!`);
+                    arr.splice(i, 1);
+                    i -= 1;
+                }
+            }
         }
 
-        let filtered = filterRange(arr, 1, 4);
-        alert(filtered);
-        alert(arr);
+        let arr = [5, 3, 8, 1];
+
+        filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+        alert( arr ); // [3, 1]
     </script>    
 </body>
 </html>
