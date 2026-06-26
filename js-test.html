@@ -15,14 +15,11 @@
             and set it back by 1 whenever arr is spliced
             */
             for (let i = 0; i < arr.length; i++) {
-                let item = arr[i];
+                let val = arr[i];
 
-                if (a <= item && item <= b) {
-                    console.log(`${item} passes`);
-                } else {
-                    console.log(`${item} does not pass!`);
+                if (val < a || val > b) {
                     arr.splice(i, 1);
-                    i -= 1;
+                    i--;
                 }
             }
         }
