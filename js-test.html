@@ -13,6 +13,12 @@
     </div>
 
     <script>
-    </script>    
+        const container = document.querySelector("#container");
+
+        const redText = document.createElement("p");
+        redText.textContent = "Hey I'm red!"
+        redText.style.color = "red";
+        container.appendChild(redText);
+    </script>
 </body>
 </html>
