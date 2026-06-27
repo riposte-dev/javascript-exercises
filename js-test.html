@@ -11,11 +11,21 @@
     <button onclick="alert('Hello World')">Click Me 1</button>
 
     <!-- Method 2 -->
-    <button id="btn">Click Me 2</button>
+    <button id="btn2">Click Me 2</button>
+
+    <!-- Method 3 -->
+    <button id="btn3">Click Me 3</button>
 
     <script>
-        const btn = document.querySelector("#btn");
-        btn.onclick = () => alert("Hello World");
+        /* Method 2 */
+        const btn2 = document.querySelector("#btn2");
+        btn2.onclick = () => alert("Hello World");
+
+        /* Method 3 */
+        const btn3 = document.querySelector("#btn3");
+        btn3.addEventListener("click", () => {
+            alert("Hello World");
+        });
     </script>
 </body>
 </html>
