@@ -23,8 +23,10 @@
 
         /* Method 3 */
         const btn3 = document.querySelector("#btn3");
-        btn3.addEventListener("click", () => {
+        btn3.addEventListener("click", (e) => {
             alert("Hello World");
+            console.log(e.target);
+            e.target.style.background = "blue";
         });
     </script>
 </body>
