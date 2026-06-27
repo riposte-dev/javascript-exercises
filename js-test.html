@@ -6,26 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- The DOM -->
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container">
+        <div class="content">This is the glorious text-content!</div>
+    </div>
+
     <script>
-        function unique(arr) {
-            /* your code */
-            return arr.filter(function(currentItem, currentIndex) {
-                /* If currentItem already appeared before, filter it out */
-                for (let i = currentIndex - 1; i >= 0; i--) {
-                    if (arr[i] == currentItem) {
-                        return false;
-                    }
-                }
-
-                return true;
-            })
-        }
-
-        let strings = ["Hare", "Krishna", "Hare", "Krishna",
-        "Krishna", "Krishna", "Hare", "Hare", ":-O"
-        ];
-
-        alert( unique(strings) ); // Hare, Krishna, :-O
     </script>    
 </body>
 </html>
