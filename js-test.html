@@ -7,9 +7,15 @@
 </head>
 <body>
     <!-- We’re going to create three buttons that all alert “Hello World” when clicked -->
-    <button onclick="alert('Hello World')">Click Me</button>
+    <!-- Method 1 -->
+    <button onclick="alert('Hello World')">Click Me 1</button>
+
+    <!-- Method 2 -->
+    <button id="btn">Click Me 2</button>
 
     <script>
+        const btn = document.querySelector("#btn");
+        btn.onclick = () => alert("Hello World");
     </script>
 </body>
 </html>
