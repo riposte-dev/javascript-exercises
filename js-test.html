@@ -6,37 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- The DOM -->
-    <h1>THE TITLE OF YOUR WEBPAGE</h1>
-    <div id="container">
-        <div class="content">This is the glorious text-content!</div>
-    </div>
+    <!-- We’re going to create three buttons that all alert “Hello World” when clicked -->
+    <button onclick="alert('Hello World')">Click Me</button>
 
     <script>
-        const container = document.querySelector("#container");
-
-        const redText = document.createElement("p");
-        redText.textContent = "Hey I'm red!"
-        redText.style.color = "red";
-        container.appendChild(redText);
-
-        const blueHeading = document.createElement("h3");
-        blueHeading.textContent = "I'm a blue h3!";
-        blueHeading.style.color = "blue";
-        container.appendChild(blueHeading);
-
-        const div = document.createElement("div");
-        div.setAttribute("style", "border: 2px solid black");
-        div.style.backgroundColor = "#FFABF0";
-        container.appendChild(div);
-
-        const heading = document.createElement("h1");
-        heading.textContent = "I'm in a div";
-        div.appendChild(heading);
-
-        const paragraph = document.createElement("p");
-        paragraph.textContent = "ME TOO!";
-        div.appendChild(paragraph);
     </script>
 </body>
 </html>
