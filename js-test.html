@@ -13,6 +13,14 @@
 
         let arr = [ john, pete, mary ];
 
+        function getAverageAge(arr) {
+            cumulativeAge = arr
+            .map(user => user.age) /* Get user ages only */
+            .reduce((sum, current) => sum + current, 0);
+
+            return cumulativeAge / arr.length;
+        }
+
         alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
     </script>
 </body>
