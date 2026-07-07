@@ -13,7 +13,7 @@
 
         let users = [ john, pete, mary ];
 
-        let usersMapped = /* ... your code ... */
+        let usersMapped = users.map(user => ({fullName: user.name + " " + user.surname, id: user.id}));
 
         /*
         usersMapped = [
