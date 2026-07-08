@@ -13,6 +13,13 @@
             {id: 'pete', name: "Pete Peterson", age: 31},
         ];
 
+        function groupById(users) {
+            return users.reduce(function(accumulator, item, index, array) {
+                accumulator[item.id] = item;
+                return accumulator;
+            }, {});
+        }
+
         let usersById = groupById(users);
 
         /*
