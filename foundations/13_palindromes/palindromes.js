@@ -1,5 +1,20 @@
-const palindromes = function () {
+const palindromes = function(string) {
+    const letters = string.split("").filter(function(letter) {
+        if (letter == " " || letter == ",") {
+            return false;
+        } else {
+            return true;
+        }
+    });
 
+    let forwardWord = letters.toString();
+    let backwardWord = letters.toReversed().toString();
+
+    if (forwardWord == backwardWord) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 // Do not edit below this line
