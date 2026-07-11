@@ -10,7 +10,7 @@ const palindromes = function(string) {
     let forwardWord = letters.toString();
     let backwardWord = letters.toReversed().toString();
 
-    if (forwardWord == backwardWord) {
+    if (forwardWord.toLowerCase() == backwardWord.toLowerCase()) {
         return true;
     } else {
         return false;
