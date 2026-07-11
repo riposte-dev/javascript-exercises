@@ -1,6 +1,6 @@
 const palindromes = function(string) {
     const letters = string.split("").filter(function(letter) {
-        if (letter == " " || letter == ",") {
+        if (letter == " " || letter == "," || letter == ".") {
             return false;
         } else {
             return true;
