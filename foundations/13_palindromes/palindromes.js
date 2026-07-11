@@ -1,11 +1,7 @@
+const punctuationList = [" ", ",", ".", "!", "?"];
+
 const palindromes = function(string) {
-    const letters = string.split("").filter(function(letter) {
-        if (letter == " " || letter == "," || letter == "." || letter == "!") {
-            return false;
-        } else {
-            return true;
-        }
-    });
+    const letters = string.split("").filter(letter => !punctuationList.includes(letter));
 
     let forwardWord = letters.toString();
     let backwardWord = letters.toReversed().toString();
